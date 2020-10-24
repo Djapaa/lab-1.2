@@ -23,7 +23,7 @@ public class Node
 public class BinaryTree
 {
     public Node root;
-    public virtual void inorder()
+    public void inorder()
     {
         if (root == null)
         {
