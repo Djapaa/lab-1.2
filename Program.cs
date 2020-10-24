@@ -34,6 +34,8 @@ public class BinaryTree
         Stack<Node> s = new Stack<Node>();
         Node curr = root;
 
+        using (StreamWriter file = new StreamWriter(@"text.txt", true))
+            
         // пройти по дереву  
         while (curr != null || s.Count > 0)
         {
@@ -48,8 +50,8 @@ public class BinaryTree
 
             // curr должен быть NULL в этот момент
             curr = s.Pop();
-
-            using (StreamWriter file = new StreamWriter(@"text.txt", true))
+            
+            
                 file.Write(curr.data + " ");
 
             // Мы посетили узел и его левое поддерево.Теперь очередь правого поддерева
